@@ -54,8 +54,18 @@ Here is some general text.
 
 Saving the file locally is basic security, next is saving to the local git repo. You do it by clicking Staged for the file in the git tab. This means it's ready to go.
 
-then you click Commit. Now the file name will be gone from the git pane. It now says "Your branch is ahead of 'origin/mast' by 1 commit." This means it's been saved in the local git repo but it hasn't been saved off of the computer. Now we need to push the modifications to the remote location.
+then you click Commit and write an explanation of what you changed. Now the file name will be gone from the git pane. It now says "Your branch is ahead of 'origin/master' by 1 commit." This means it's been saved in the local git repo but it hasn't been saved off of the computer. Now we need to push the modifications to the remote location.
 
-You hit the green arrow in the git pane to push.
+You hit the green arrow in the git pane to push (there might not be a file listed in the pane that's ok).
 
-here is another cool line to practice pushing to github.
+here is another cool line to practice pushing to github. You have to push your code to github each time you want to save, it doesn't happen in real time.
+
+when you click on your file in github, you can click the "history" button and it'll show you all versions and tracks all changes you've made.
+
+git and github are not R or RStudio names. They're not tied to each other, RStudio has just added features to their environment to allow for RStudio.
+
+You can read the workflow here(https://allisonhorst.github.io/EDS_212_essential-math/comp_session_keys/comp_session_2a.html)
+
+"pulling" is when you pull files from the remote git repo and want to work on it locally
+
+to close and re-open - open the rproj and then open the r markdown file
