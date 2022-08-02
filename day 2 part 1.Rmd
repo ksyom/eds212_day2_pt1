@@ -50,4 +50,12 @@ eval(dg_dz)
 
 Hi!
 
-Here is some general text
+Here is some general text. 
+
+Saving the file locally is basic security, next is saving to the local git repo. You do it by clicking Staged for the file in the git tab. This means it's ready to go.
+
+then you click Commit. Now the file name will be gone from the git pane. It now says "Your branch is ahead of 'origin/mast' by 1 commit." This means it's been saved in the local git repo but it hasn't been saved off of the computer. Now we need to push the modifications to the remote location.
+
+You hit the green arrow in the git pane to push.
+
+here is another cool line to practice pushing to github.
