@@ -449,6 +449,42 @@ the main branch of your project</p>
 <p>each project has its own repo - this is a good thing, good
 organizational structure</p>
 </div>
+<div id="extra-derivative-practice-day-2-individual-tasks" class="section level2">
+<h2>Extra Derivative Practice! Day 2 Individual Tasks</h2>
+<ol style="list-style-type: decimal">
+<li>Find the derivative of</li>
+</ol>
+<p><span class="math display">\[f(x)=x^2\]</span> Solution:</p>
+<pre class="r"><code>deriv_of_question1 &lt;- expression(x ^ 2)
+q1_derivative &lt;- deriv(deriv_of_question1, &quot;x&quot;)
+
+x &lt;- 3
+eval(q1_derivative)</code></pre>
+<pre><code>## [1] 9
+## attr(,&quot;gradient&quot;)
+##      x
+## [1,] 6</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the derivative of</li>
+</ol>
+<p><span class="math display">\[P(a)=2*(3a+2)^4−5\]</span></p>
+<pre class="r"><code>deriv_of_question2 &lt;- expression(2 * (3*a) ^ 4 - 5)
+q2_derivative &lt;-D(deriv_of_question2, &quot;a&quot;)
+
+a &lt;- 1.2
+eval(q2_derivative)</code></pre>
+<pre><code>## [1] 1119.744</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the derivative of</li>
+</ol>
+<p><span class="math display">\[g(t)=−4t/(t^2+1)^3\]</span></p>
+<pre class="r"><code>deriv_of_q3 &lt;- expression((-4 * t)/(t^2+1)^3)
+q3_derivative &lt;- D(deriv_of_q3, &quot;t&quot;)
+
+t &lt;- 0
+eval(q3_derivative)</code></pre>
+<pre><code>## [1] -4</code></pre>
+</div>
 
 
 
