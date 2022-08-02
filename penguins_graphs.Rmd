@@ -42,7 +42,9 @@ will generate a constant dot size of 4 for all penguins, adds panels for the dif
 
 ```{r}
 ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + geom_point(aes(color = species)) +
-  labs(x = "Bill Length in mm", y = "Bill Depth in mm", title = "Scatterplot of Penguins by Bill Length and Bill Depth")
+  labs(x = "Bill Length in mm", y = "Bill Depth in mm", title = "Scatterplot of Penguins by Bill Length and Bill Depth") +
+  theme(axis.text = element_text(size = 12))+
+  theme(plot.title = element_text(size = 18)) 
 ```
 
 #### In a new code chunk, make a jitterplot of flipper length by species (species on the x-axis, flipper length on the y-axis). Update axis labels and add a title.
