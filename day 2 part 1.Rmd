@@ -69,3 +69,6 @@ You can read the workflow here(https://allisonhorst.github.io/EDS_212_essential-
 "pulling" is when you pull files from the remote git repo and want to work on it locally
 
 to close and re-open - open the rproj and then open the r markdown file
+
+function of branches is so you can all work on pieces of a project without affecting your core work until you're sure to merge your work to the main branch of your project
+

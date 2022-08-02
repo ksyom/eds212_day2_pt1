@@ -401,7 +401,48 @@ expression() in R are called functions</p>
 <p>Find the slope of <span class="math display">\[g(Z) =
 2z^3-10.5z^2+4.1\]</span></p>
 <pre class="r"><code>#second way to calculate derivatives
-gz &lt;- expression(2 * z ^ 2 -10.5 * x ^ 2 + 4.1)</code></pre>
+gz &lt;- expression(2 * z ^ 2 -10.5 * x ^ 2 + 4.1)
+
+dg_dz &lt;- D(gz,&quot;z&quot;)
+dg_dz</code></pre>
+<pre><code>## 2 * (2 * z)</code></pre>
+<pre class="r"><code>#can be single or double quotes
+
+#lets evaluate the slope over a range of values
+
+z &lt;- seq(from = -3, to = 4, by = 0.5)
+
+#evaluate it!
+
+eval(dg_dz)</code></pre>
+<pre><code>##  [1] -12 -10  -8  -6  -4  -2   0   2   4   6   8  10  12  14  16</code></pre>
+<p>Hi!</p>
+<p>Here is some general text.</p>
+<p>Saving the file locally is basic security, next is saving to the
+local git repo. You do it by clicking Staged for the file in the git
+tab. This means it’s ready to go.</p>
+<p>then you click Commit and write an explanation of what you changed.
+Now the file name will be gone from the git pane. It now says “Your
+branch is ahead of ‘origin/master’ by 1 commit.” This means it’s been
+saved in the local git repo but it hasn’t been saved off of the
+computer. Now we need to push the modifications to the remote
+location.</p>
+<p>You hit the green arrow in the git pane to push (there might not be a
+file listed in the pane that’s ok).</p>
+<p>here is another cool line to practice pushing to github. You have to
+push your code to github each time you want to save, it doesn’t happen
+in real time.</p>
+<p>when you click on your file in github, you can click the “history”
+button and it’ll show you all versions and tracks all changes you’ve
+made.</p>
+<p>git and github are not R or RStudio names. They’re not tied to each
+other, RStudio has just added features to their environment to allow for
+RStudio.</p>
+<p>You can read the workflow here(<a href="https://allisonhorst.github.io/EDS_212_essential-math/comp_session_keys/comp_session_2a.html" class="uri">https://allisonhorst.github.io/EDS_212_essential-math/comp_session_keys/comp_session_2a.html</a>)</p>
+<p>“pulling” is when you pull files from the remote git repo and want to
+work on it locally</p>
+<p>to close and re-open - open the rproj and then open the r markdown
+file</p>
 </div>
 
 
