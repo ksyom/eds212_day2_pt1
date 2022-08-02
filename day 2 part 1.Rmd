@@ -1,0 +1,53 @@
+---
+title: "eds 212 day 2 pt 1 - deriatives and git intro"
+author: "kimberly yom"
+date: "2022-08-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Derivatives in R
+For R markdown remember that you have to put the code in the code chunks to run
+
+Find the derivative of $$f(x) = 5x^2$$
+
+```{r}
+ex_1 <- expression(5 * x ^ 2)
+
+my_derivative <- deriv(ex_1, "x")
+#we're telling it to take the derivative with respect to x.
+my_derivative
+
+#i want to find the slope at x = 2.8
+x <- 2.8
+eval(my_derivative)
+```
+
+a word immediately followed by parentheses, like seq() or expression() in R are called functions
+
+Find the slope of $$g(Z) = 2z^3-10.5z^2+4.1$$
+
+```{r}
+#second way to calculate derivatives
+gz <- expression(2 * z ^ 2 -10.5 * x ^ 2 + 4.1)
+
+dg_dz <- D(gz,"z")
+dg_dz
+
+#can be single or double quotes
+
+#lets evaluate the slope over a range of values
+
+z <- seq(from = -3, to = 4, by = 0.5)
+
+#evaluate it!
+
+eval(dg_dz)
+```
+
+
+
+
