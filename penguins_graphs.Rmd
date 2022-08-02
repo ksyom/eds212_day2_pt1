@@ -7,5 +7,26 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+#no quotes in tidyverse, calling for package
+#to install, install.packages in the console("packagename") in quotes. Just typed in console install.packages("palmerpenguins), so now I can call for it
+library(palmerpenguins)
 ```
 
+typing view(penguins) in the console brings up the data frame
+
+```{r}
+#first 6 lines
+head(penguins)
+#last 6 lines
+tail(penguins)
+```
+
+Scatterplot of body mass versus flipper length:
+
+```{r}
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species))
+#this tells us that the color is dependent on the species
+```
+
+anytime you want to change any part of a graph's aesthetics, you do it through aes (see previous code chunk)
