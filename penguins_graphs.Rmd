@@ -25,8 +25,8 @@ tail(penguins)
 Scatterplot of body mass versus flipper length:
 
 ```{r}
-ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species))
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 4)
 #this tells us that the color is dependent on the species
 ```
 
-anytime you want to change any part of a graph's aesthetics, you do it through aes (see previous code chunk)
+anytime you want to change any part of a graph's aesthetics based on variables, you do it through aes (see previous code chunk). You can put it out of the aes(), but then it's not dependent on a variable. If it's referring to a variable it goes in aes() if it's not referring to a variable it goes outside of aes
