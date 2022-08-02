@@ -25,12 +25,24 @@ tail(penguins)
 Scatterplot of body mass versus flipper length:
 
 ```{r}
-ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 1) + 
-  facet_wrap(~island) + 
-  theme_minimal() + 
-  labs(x = "Body Mass in Grams", y = "Flipper Length (mm)", title = "Penguin Graphs")
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 1)  + 
+  facet_wrap(~island) +
+  theme_minimal() +
+  labs(
+    x = "body mass in grams", y = "flipper length in mm", title = "Graph of Palmer Penguins")
 #this tells us that the color is dependent on the species
-#~ means "as a different function of island
+#~ means "as the different functions of island", makes three separate panels for islands
 ```
 
-anytime you want to change any part of a graph's aesthetics based on variables, you do it through aes (see previous code chunk). You can put it out of the aes(), but then it's not dependent on a variable. If it's referring to a variable it goes in aes() if it's not referring to a variable it goes outside of aes, ex. ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 4) will generate a constant dot size of 4 for all penguins.
+anytime you want to change any part of a graph's aesthetics based on variables, you do it through aes (see previous code chunk). You can put it out of the aes(), but then it's not dependent on a variable. If it's referring to a variable it goes in aes() if it's not referring to a variable it goes outside of aes, ex. ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 4)  + 
+facet_wrap(~island)+
+theme_minimal() + 
+labs(x = "Body Mass in Grams", y = "Flipper Length (mm)", title = "Penguin Graphs") 
+
+will generate a constant dot size of 4 for all penguins, adds panels for the different islands, added a minimal theme, adds labels to the axis and graph title
+
+```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + geom_point(aes(color = species)) +
+  labs(x = "Bill Length in mm", y = "Bill Depth in mm", title = "Scatterplot of Penguins by Bill Length and Bill Depth")
+```
+
